@@ -3,6 +3,7 @@ lock "~> 3.16.0"
 
 set :application, "portfolio"
 set :repo_url, "git@github.com:Naoto3615/portfolio.git"
+set :branch, "main"
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, 'master'
