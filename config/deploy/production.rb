@@ -9,3 +9,4 @@ set :ssh_options, {
   keys: [File.expand_path('~/.ssh/conoha/id_rsa')], # リモートサーバー用秘密鍵があるところを指定
   forward_agent: true,
   auth_methods: %w(publickey)
+}
