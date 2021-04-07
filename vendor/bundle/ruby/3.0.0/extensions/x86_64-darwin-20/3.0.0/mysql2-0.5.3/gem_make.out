@@ -1,5 +1,5 @@
 current directory: /Users/naotomatsunaga/App/Portfolio/vendor/bundle/ruby/3.0.0/gems/mysql2-0.5.3/ext/mysql2
-/Users/naotomatsunaga/.rbenv/versions/3.0.0/bin/ruby -I /Users/naotomatsunaga/.rbenv/versions/3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210407-16096-jlrave.rb extconf.rb --with-opt-lib\=/usr/local/opt/openssl/lib --with-opt-include\=-I/usr/local/opt/openssl/include
+/Users/naotomatsunaga/.rbenv/versions/3.0.0/bin/ruby -I /Users/naotomatsunaga/.rbenv/versions/3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210407-61588-ma7dg3.rb extconf.rb --with-ldflags\=-L/usr/local/opt/openssl/lib --with-cppflags\=-I/usr/local/opt/openssl/include
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -54,4 +54,4 @@ linking shared-object mysql2/mysql2.bundle
 
 current directory: /Users/naotomatsunaga/App/Portfolio/vendor/bundle/ruby/3.0.0/gems/mysql2-0.5.3/ext/mysql2
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20210407-16096-3j6wg/mysql2
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20210407-61588-4okr61/mysql2
