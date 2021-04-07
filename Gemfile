@@ -53,6 +53,8 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
+  gem 'capistrano-nvm', require: false
+  gem 'capistrano-yarn'
 end
 
 group :test do
