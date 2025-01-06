@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "Portfolio/asgi.py",
+      "src": "config/asgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb"
@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "Portfolio/asgi.py"
+      "dest": "config/asgi.py"
     }
   ]
 }
