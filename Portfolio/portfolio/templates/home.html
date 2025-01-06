@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home - My Portfolio
+{% endblock %}
+
+{% block content %}
+<!-- ヒーローセクション -->
+<section class="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-16">
+    <div class="container mx-auto">
+        <h1 class="text-6xl font-bold mb-4">Welcome to My Portfolio</h1>
+        <p class="text-lg mb-6">Pythonを愛するエンジニアが手掛けた、最新のプロジェクトとスキルをご紹介します。</p>
+    </div>
+</section>
+
+<!-- スキルセットセクション -->
+<section class="container mx-auto py-12">
+    <h2 class="text-4xl font-bold text-center mb-10">My Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white shadow-lg rounded p-6 text-center">
+            <img src="{% static 'images/python.svg' %}" alt="Python" class="h-16 mx-auto mb-4">
+            <h3 class="text-xl font-bold mb-2">Python</h3>
+            <p class="text-gray-600">豊富な経験を持ち、DjangoやFlaskを使用したWeb開発や業務アプリ開発に精通。</p>
+        </div>
+        <div class="bg-white shadow-lg rounded p-6 text-center">
+            <img src="{% static 'images/django.png' %}" alt="Django" class="h-16 mx-auto mb-4">
+            <h3 class="text-xl font-bold mb-2">Django</h3>
+            <p class="text-gray-600">効率的でスケーラブルなバックエンドを構築し、複雑なロジックを簡潔に実装。</p>
+        </div>
+        <div class="bg-white shadow-lg rounded p-6 text-center">
+            <img src="{% static 'images/react.png' %}" alt="React" class="h-16 mx-auto mb-4">
+            <h3 class="text-xl font-bold mb-2">React</h3>
+            <p class="text-gray-600">モダンなフロントエンドを設計し、ユーザー体験を向上させる動的なUIを提供。</p>
+        </div>
+    </div>
+</section>
+
+<!-- プロジェクトセクション -->
+<section class="bg-gray-100 py-12">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-10">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white shadow-lg rounded p-6">
+                <h3 class="text-xl font-bold mb-2">DX推進プロジェクト</h3>
+                <p class="text-gray-600 mb-4">業務効率を30%向上させるための業務アプリケーションを開発。</p>
+                <a href="/projects/dx" class="text-blue-500 hover:underline">View Details →</a>
+            </div>
+            <div class="bg-white shadow-lg rounded p-6">
+                <h3 class="text-xl font-bold mb-2">Webサイト開発</h3>
+                <p class="text-gray-600 mb-4">DjangoとReactを活用し、スケーラブルなWebサイトを構築。</p>
+                <a href="/projects/web" class="text-blue-500 hover:underline">View Details →</a>
+            </div>
+            <div class="bg-white shadow-lg rounded p-6">
+                <h3 class="text-xl font-bold mb-2">業務管理ツール</h3>
+                <p class="text-gray-600 mb-4">フルスタックで開発し、データ管理と自動化を実現。</p>
+                <a href="/projects/management" class="text-blue-500 hover:underline">View Details →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- コールトゥアクションセクション -->
+<section class="bg-gradient-to-r from-green-500 to-blue-500 text-white text-center py-16">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-4">Let’s Work Together</h2>
+        <p class="text-lg mb-6">新しいプロジェクトやコラボレーションのご相談をお待ちしています。</p>
+        <a href="/contact/" class="bg-white text-green-500 font-semibold py-3 px-6 rounded shadow-md hover:bg-gray-200 transition duration-300">
+            Get in Touch
+        </a>
+    </div>
+</section>
+{% endblock %}

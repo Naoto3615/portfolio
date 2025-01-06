@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+About Me - Portfolio
+{% endblock %}
+
+{% block content %}
+<section class="text-center py-12 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+    <h2 class="text-5xl font-bold mb-3">About Me</h2>
+</section>
+
+<section class="container mx-auto p-6 mt-10 bg-white shadow-md rounded">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+        <div>
+            <img src="{% static 'images/profile.jpeg' %}" alt="プロフィール写真" class="rounded-full shadow-lg w-60 h-60 mx-auto md:mx-0">
+        </div>
+        <div>
+            <h3 class="text-3xl font-bold mb-4">Hello! I'm Naoto Matsunaga</h3>
+            <p class="text-lg leading-relaxed mb-4">
+                2児のパパをしながら働くエンジニアです。Webサイト開発、DX推進、業務アプリケーションの開発を得意とし、
+                技術的な課題解決やプロジェクト管理の経験も豊富です。
+            </p>
+            <p class="text-lg leading-relaxed">
+                プロジェクトリーダーとしての経験から、チーム全体を見渡し、効率的なタスク管理とコミュニケーションを大切にしています。
+                また、常に最新の技術トレンドを学び、業務に取り入れることを心がけています。
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto mt-12">
+    <h3 class="text-3xl font-bold text-center mb-6">Highlights</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-r from-green-400 to-blue-400 text-white p-6 rounded shadow-md">
+            <h4 class="text-xl font-bold mb-2">経験年数</h4>
+            <p class="text-lg">5年以上のソフトウェア開発経験</p>
+        </div>
+        <div class="bg-gradient-to-r from-pink-400 to-purple-400 text-white p-6 rounded shadow-md">
+            <h4 class="text-xl font-bold mb-2">スキルセット</h4>
+            <p class="text-lg">Python, Django, React, AWS, Docker など</p>
+        </div>
+        <div class="bg-gradient-to-r from-yellow-400 to-red-400 text-white p-6 rounded shadow-md">
+            <h4 class="text-xl font-bold mb-2">プロジェクト管理</h4>
+            <p class="text-lg">PLとしてチームを率いた経験を多数保有</p>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto mt-12 p-6 bg-white shadow-md rounded">
+    <h3 class="text-3xl font-bold mb-6">My Journey</h3>
+    <ol class="relative border-l border-gray-200">
+        <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full -left-4 ring-8 ring-white">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zM5 4a1 1 0 011-1h8a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V4z" clip-rule="evenodd"></path>
+                </svg>
+            </span>
+            <h4 class="text-lg font-semibold">2017年</h4>
+            <p class="mb-4 text-base">エンジニアとしてキャリアをスタート。業務アプリケーション開発を担当。</p>
+        </li>
+        <li class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-green-500 rounded-full -left-4 ring-8 ring-white">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zM5 4a1 1 0 011-1h8a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V4z" clip-rule="evenodd"></path>
+                </svg>
+            </span>
+            <h4 class="text-lg font-semibold">2020年</h4>
+            <p class="mb-4 text-base">PLとしてチームをリード。DX推進プロジェクトで成果を上げる。</p>
+        </li>
+        <li class="ml-6">
+            <span class="absolute flex items-center justify-center w-8 h-8 bg-purple-500 rounded-full -left-4 ring-8 ring-white">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zM5 4a1 1 0 011-1h8a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V4z" clip-rule="evenodd"></path>
+                </svg>
+            </span>
+            <h4 class="text-lg font-semibold">現在</h4>
+            <p class="mb-4 text-base">エンジニアとして最新技術を活用しながら成長を続けています。</p>
+        </li>
+    </ol>
+</section>
+{% endblock %}

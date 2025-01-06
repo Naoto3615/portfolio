@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+業務管理ツール - My Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- プロジェクト概要セクション -->
+<section class="container mx-auto py-12">
+    <h2 class="text-4xl font-bold text-center mb-10">プロジェクト概要</h2>
+    
+    <!-- 業界分野の記載 -->
+    <div class="flex justify-center items-center mb-6">
+        <span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">
+            業界・職種 : IT / 業務管理
+        </span>
+    </div>
+    
+    <!-- プロジェクト概要文 -->
+    <div>
+        <p class="text-gray-600 leading-relaxed text-lg text-center mb-4">
+            業務管理ツールのプロジェクトでは、効率的なタスク管理とチームの透明性を向上させるための工場内の工程管理システムを構築しました。
+        </p>
+        <p class="text-gray-600 leading-relaxed text-lg text-center mb-4">
+            ユーザーインターフェースは直感的に設計され、複数のプロジェクトを同時に管理可能なダッシュボードを開発しました。
+        </p>
+        <p class="text-gray-600 leading-relaxed text-lg text-center">
+            データの可視化とIoT連携により、作業効率が大幅に向上し、意思決定のスピードを加速させました。
+        </p>
+    </div>
+</section>
+
+<!-- Tech Stack セクション -->
+<section class="container mx-auto py-12 bg-gray-50">
+    <h2 class="text-4xl font-bold text-center mb-10">Tech Stack</h2>
+    <div class="grid grid-cols-2 gap-8 justify-items-center">
+        <div class="text-center">
+            <img src="{% static 'images/python.svg' %}" alt="Python" class="h-16 mx-auto mb-2">
+            <p class="text-gray-700 font-semibold">Python</p>
+        </div>
+        <div class="text-center">
+            <img src="{% static 'images/pyqt.png' %}" alt="Django" class="h-16 mx-auto mb-2">
+            <p class="text-gray-700 font-semibold">pyQT</p>
+        </div>
+        <div class="text-center">
+            <img src="{% static 'images/postgreSQL.png' %}" alt="React" class="h-16 mx-auto mb-2">
+            <p class="text-gray-700 font-semibold">PostgreSQL</p>
+        </div>
+        <div class="text-center">
+            <img src="{% static 'images/powerbi.png' %}" alt="SQLite" class="h-16 mx-auto mb-2">
+            <p class="text-gray-700 font-semibold">PowerBI</p>
+        </div>
+    </div>
+</section>
+
+<!-- 成果セクション -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-10">プロジェクトの成果</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- 成果 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-xl font-bold mb-4">業務管理の効率化</h3>
+                <p class="text-gray-600">
+                    各工程の確認時間削減と透明性向上により、業務管理がスムーズになりました。
+                </p>
+            </div>
+            <!-- 成果 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-xl font-bold mb-4">チーム生産性向上</h3>
+                <p class="text-gray-600">
+                    コラボレーションツールを用いて、チーム全体の生産性が20%以上向上。残業時間も削減しました。
+                </p>
+            </div>
+            <!-- 成果 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-xl font-bold mb-4">データ可視化</h3>
+                <p class="text-gray-600">
+                    機械の異常値など、データを一目で理解できるダッシュボードを導入し、意思決定を迅速化しました。
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- コールトゥアクションセクション -->
+<section class="bg-gradient-to-r from-green-500 to-blue-500 text-white text-center py-16">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold mb-4">次のプロジェクトを一緒に作りましょう</h2>
+        <p class="text-lg mb-6">
+            このプロジェクトの成功を新しいプロジェクトにもつなげませんか？お気軽にご相談ください。
+        </p>
+        <a href="/contact/" class="bg-white text-green-500 font-semibold py-3 px-6 rounded shadow-md hover:bg-gray-200 transition duration-300">
+            Get in Touch
+        </a>
+    </div>
+</section>
+
+{% endblock %}
