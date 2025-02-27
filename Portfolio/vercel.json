@@ -1,18 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "config/asgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
-    },
-    {
-      "src": "staticfiles/**/*",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/static/(.*)",
@@ -20,7 +7,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "config/asgi.py"
+      "dest": "config.asgi.application"
     }
   ],
   "installCommand": "pip install -r requirements.txt"
