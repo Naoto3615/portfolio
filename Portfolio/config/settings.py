@@ -12,8 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from email.policy import default
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 import dj_database_url
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -84,25 +86,27 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-# DATABASE_URL = 'postgresql://postgres.vcavlacecismaprgivrt:Gaikou_11@aws-0-ap-northeast-1.pooler.supabase.com:6543/postgres'
+DATABASE_URL = 'postgresql://postgres.vcavlacecismaprgivrt:Gaikou_11@aws-0-ap-northeast-1.pooler.supabase.com:6543/postgres'
 
-DATABASE_URL = os.getenv("POSTGRES_URL")  # SupabaseのPostgres URLを使用
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get("DB_NAME"),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'HOST': os.environ.get("DB_HOST"),
+        'PORT': os.environ.get("DB_PORT"),
+    }
+}
 
-if DATABASE_URL:
-    DATABASES = {
-        'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, ssl_require=True)
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv("POSTGRES_DATABASE", "postgres"),
-            'USER': os.getenv("POSTGRES_USER", "postgres"),
-            'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
-            'HOST': os.getenv("POSTGRES_HOST"),
-            'PORT': "5432",
-        }
-    }
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.getenv('DATABASE_URL'),
+#         conn_max_age=600,  # コネクションの再利用時間
+#         ssl_require=True
+#     )
+# }
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
