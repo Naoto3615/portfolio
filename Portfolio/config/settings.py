@@ -36,7 +36,7 @@ ALLOWED_HOSTS = [
     '.vercel.app',  # 他のサブドメインを許可
     'localhost',  # ローカル開発用
 ]
-CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS")
 # CSRF_TRUSTED_ORIGINS = ["https://portfolio-31z4ytouu-naoto3615s-projects.vercel.app"]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
