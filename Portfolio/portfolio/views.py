@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
+from .models import Contact
 
 def home(request):
     return render(request, 'home.html')
@@ -25,7 +26,9 @@ def contact(request):
 def contact_submit(request):
     if request.method == 'POST':
         # フォームデータを取得
-        name = request.POST.get('name')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        name = f"{first_name} {last_name}"  # 姓と名を結合
         email = request.POST.get('email')
         message = request.POST.get('message')
 
@@ -35,7 +38,8 @@ def contact_submit(request):
             return redirect('contact')
 
         # メール送信やデータベース保存処理をここで実行可能
-        # 例: print(f"Name: {name}, Email: {email}, Message: {message}")
+        contact = Contact(name=name, email=email, message=message)
+        contact.save()
 
         messages.success(request, 'お問い合わせ内容を送信しました。')
         return redirect('contact')  # 成功後にContactページに戻る
